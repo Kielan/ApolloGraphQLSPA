@@ -18,9 +18,8 @@
 		843FDA78208DA05000F9B425 /* PostListViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 843FDA77208DA05000F9B425 /* PostListViewController.graphql */; };
 		843FDA7A208DE7C600F9B425 /* PostTableViewCell.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 843FDA79208DE7C600F9B425 /* PostTableViewCell.graphql */; };
 		843FDA8220919A9F00F9B425 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDA8120919A9F00F9B425 /* API.swift */; };
-		843FDA8320919E9B00F9B425 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDA0E208C681A00F9B425 /* PostListViewController.swift */; };
 		843FDA8520919EDE00F9B425 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDA8420919EDE00F9B425 /* PostTableViewCell.swift */; };
-		844B517D20A67A8000DD69DA /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844B517C20A67A8000DD69DA /* Apollo.framework */; };
+		844B518020AD9DA100DD69DA /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844B517F20AD9DA100DD69DA /* Apollo.framework */; };
 		845C554A20A64570008B74C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845C554920A64570008B74C0 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +72,7 @@
 		843FDA79208DE7C600F9B425 /* PostTableViewCell.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PostTableViewCell.graphql; sourceTree = "<group>"; };
 		843FDA8120919A9F00F9B425 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		843FDA8420919EDE00F9B425 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		844B517C20A67A8000DD69DA /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Apollo.framework; sourceTree = "<group>"; };
+		844B517F20AD9DA100DD69DA /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = "../../../Library/Developer/Xcode/DerivedData/Apollo-ayetgfnejpaxwzglnlmwloinmynq/Build/Products/Debug/Apollo.framework"; sourceTree = "<group>"; };
 		845C554920A64570008B74C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844B517D20A67A8000DD69DA /* Apollo.framework in Frameworks */,
+				844B518020AD9DA100DD69DA /* Apollo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +163,7 @@
 		845C554720A45876008B74C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				844B517C20A67A8000DD69DA /* Apollo.framework */,
+				844B517F20AD9DA100DD69DA /* Apollo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -356,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843FDA8320919E9B00F9B425 /* PostListViewController.swift in Sources */,
 				843FDA2D208C681A00F9B425 /* ApolloGraphQLSPAUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

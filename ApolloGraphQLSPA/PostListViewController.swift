@@ -29,7 +29,7 @@ class PostListViewController: UITableViewController {
     // MARK: - Data loading
     var watcher: GraphQLQueryWatcher<AllPostsQuery>?
     func loadData() {
-        watcher = Apollo.watch(query: AllPostsQuery()) { (result, error) in
+        watcher = apollo.watch(query: AllPostsQuery()) { (result, error) in
             if let error = error {
                 NSLog("Error while fetching query: \(error.localizedDescription)")
                 return
@@ -43,19 +43,22 @@ class PostListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts?.count ?? 0
     }
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell {
+    /*func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfferPreview", for: indexPath as IndexPath)
         return cell
-    }
-        /*
+    }*/
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? PostTableViewCell else {
-            fatalError("Could not dequeue PostTableViewCell")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OfferPreview", for: indexPath)
+
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OfferPreview", for: indexPath) as? PostTableViewCell else {
+//            fatalError("Could not dequeue PostTableViewCell")
+ //       }
         guard let post = posts?[indexPath.row] else {
             fatalError("Could not find post at row \(indexPath.row)")
         }
-        cell.configure(with: post.fragments.postDetails)
+        NSLog("Looking for alternative to cell.configure: \(post)")
+//        cell.configure(with: post.fragments.postDetails)
         return cell
-    }*/
+
+    }
 }
