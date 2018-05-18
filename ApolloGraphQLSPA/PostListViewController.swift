@@ -48,7 +48,9 @@ class PostListViewController: UITableViewController {
         return cell
     }*/
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OfferPreview", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OfferPreview", for: indexPath) as? PostTableViewCell else {
+            fatalError("Could not dequeue PostTableViewCell")
+        }
 
 //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OfferPreview", for: indexPath) as? PostTableViewCell else {
 //            fatalError("Could not dequeue PostTableViewCell")
@@ -56,8 +58,10 @@ class PostListViewController: UITableViewController {
         guard let post = posts?[indexPath.row] else {
             fatalError("Could not find post at row \(indexPath.row)")
         }
-        NSLog("Looking for alternative to cell.configure: \(post)")
-//        cell.configure(with: post.fragments.postDetails)
+        NSLog("cell.configure 1: \(post)")
+        NSLog("cell.configure 2: \(post.fragments.postDetails)")
+
+        cell.configure(with: post.fragments.postDetails)
         return cell
 
     }
