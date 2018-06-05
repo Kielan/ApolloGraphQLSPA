@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840DD45420C63AA800F84E38 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45320C63AA800F84E38 /* StartViewController.swift */; };
+		840DD45720C63D3500F84E38 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45620C63D3500F84E38 /* AuthService.swift */; };
+		840DD45920C641B300F84E38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45820C641B300F84E38 /* LoginViewController.swift */; };
+		840DD45C20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45B20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift */; };
+		840DD45F20C7521400F84E38 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45E20C7521400F84E38 /* NetworkRequest.swift */; };
 		843FDA0D208C681A00F9B425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDA0C208C681A00F9B425 /* AppDelegate.swift */; };
 		843FDA0F208C681A00F9B425 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDA0E208C681A00F9B425 /* PostListViewController.swift */; };
 		843FDA12208C681A00F9B425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FDA10208C681A00F9B425 /* Main.storyboard */; };
@@ -54,6 +59,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		840DD45320C63AA800F84E38 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		840DD45620C63D3500F84E38 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		840DD45820C641B300F84E38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		840DD45B20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAuthLocalStrategyModel.swift; sourceTree = "<group>"; };
+		840DD45E20C7521400F84E38 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		843FDA09208C681A00F9B425 /* ApolloGraphQLSPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApolloGraphQLSPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843FDA0C208C681A00F9B425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843FDA0E208C681A00F9B425 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840DD45520C63CD100F84E38 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				840DD45620C63D3500F84E38 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		840DD45D20C74E8A00F84E38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				840DD45B20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		843FDA00208C681A00F9B425 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +153,8 @@
 		843FDA0B208C681A00F9B425 /* ApolloGraphQLSPA */ = {
 			isa = PBXGroup;
 			children = (
+				840DD45D20C74E8A00F84E38 /* Models */,
+				840DD45520C63CD100F84E38 /* Services */,
 				843FDA8120919A9F00F9B425 /* API.swift */,
 				843FDA0C208C681A00F9B425 /* AppDelegate.swift */,
 				843FDA74208D7AD100F9B425 /* schema.json */,
@@ -138,6 +166,9 @@
 				843FDA15208C681A00F9B425 /* LaunchScreen.storyboard */,
 				843FDA18208C681A00F9B425 /* Info.plist */,
 				843FDA8420919EDE00F9B425 /* PostTableViewCell.swift */,
+				840DD45320C63AA800F84E38 /* StartViewController.swift */,
+				840DD45820C641B300F84E38 /* LoginViewController.swift */,
+				840DD45E20C7521400F84E38 /* NetworkRequest.swift */,
 			);
 			path = ApolloGraphQLSPA;
 			sourceTree = "<group>";
@@ -336,9 +367,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840DD45920C641B300F84E38 /* LoginViewController.swift in Sources */,
+				840DD45720C63D3500F84E38 /* AuthService.swift in Sources */,
 				843FDA8220919A9F00F9B425 /* API.swift in Sources */,
 				843FDA0D208C681A00F9B425 /* AppDelegate.swift in Sources */,
+				840DD45420C63AA800F84E38 /* StartViewController.swift in Sources */,
+				840DD45C20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift in Sources */,
 				843FDA8520919EDE00F9B425 /* PostTableViewCell.swift in Sources */,
+				840DD45F20C7521400F84E38 /* NetworkRequest.swift in Sources */,
 				843FDA0F208C681A00F9B425 /* PostListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
