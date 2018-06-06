@@ -43,10 +43,6 @@ struct AuthService {
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
                 return nil
         }
-        return URL(string: "https://gateway.marvel.com/v1/public/characters" +
-            "?nameStartsWith=\(namePrefix)" +
-            "&limit=\(requestModel.pageSize)" +
-            "&offset=\(requestModel.offset)" +
-            authParametersGenerator())
+        return URL(string: ProcessInfo.processInfo.environment["API_URL"] + "/auth")
     }
 }
