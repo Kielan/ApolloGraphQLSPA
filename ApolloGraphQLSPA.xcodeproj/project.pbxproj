@@ -12,6 +12,8 @@
 		840DD45920C641B300F84E38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45820C641B300F84E38 /* LoginViewController.swift */; };
 		840DD45C20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45B20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift */; };
 		840DD45F20C7521400F84E38 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD45E20C7521400F84E38 /* NetworkRequest.swift */; };
+		840DD46120C81BA700F84E38 /* UserRespModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD46020C81BA700F84E38 /* UserRespModel.swift */; };
+		840DD46520C8A57400F84E38 /* LoginComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD46420C8A57400F84E38 /* LoginComponent.swift */; };
 		843FDA0D208C681A00F9B425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDA0C208C681A00F9B425 /* AppDelegate.swift */; };
 		843FDA0F208C681A00F9B425 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDA0E208C681A00F9B425 /* PostListViewController.swift */; };
 		843FDA12208C681A00F9B425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FDA10208C681A00F9B425 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		840DD45820C641B300F84E38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		840DD45B20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAuthLocalStrategyModel.swift; sourceTree = "<group>"; };
 		840DD45E20C7521400F84E38 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		840DD46020C81BA700F84E38 /* UserRespModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRespModel.swift; sourceTree = "<group>"; };
+		840DD46420C8A57400F84E38 /* LoginComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponent.swift; sourceTree = "<group>"; };
 		843FDA09208C681A00F9B425 /* ApolloGraphQLSPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApolloGraphQLSPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843FDA0C208C681A00F9B425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843FDA0E208C681A00F9B425 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
@@ -124,8 +128,36 @@
 			isa = PBXGroup;
 			children = (
 				840DD45B20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift */,
+				840DD46020C81BA700F84E38 /* UserRespModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		840DD46220C8A54600F84E38 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				840DD46620C8BC7200F84E38 /* PostList */,
+				840DD46320C8A55200F84E38 /* Login */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		840DD46320C8A55200F84E38 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				840DD46420C8A57400F84E38 /* LoginComponent.swift */,
+				840DD45820C641B300F84E38 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		840DD46620C8BC7200F84E38 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				843FDA0E208C681A00F9B425 /* PostListViewController.swift */,
+				843FDA8420919EDE00F9B425 /* PostTableViewCell.swift */,
+			);
+			path = PostList;
 			sourceTree = "<group>";
 		};
 		843FDA00208C681A00F9B425 = {
@@ -153,6 +185,7 @@
 		843FDA0B208C681A00F9B425 /* ApolloGraphQLSPA */ = {
 			isa = PBXGroup;
 			children = (
+				840DD46220C8A54600F84E38 /* UI */,
 				840DD45D20C74E8A00F84E38 /* Models */,
 				840DD45520C63CD100F84E38 /* Services */,
 				843FDA8120919A9F00F9B425 /* API.swift */,
@@ -160,14 +193,11 @@
 				843FDA74208D7AD100F9B425 /* schema.json */,
 				843FDA77208DA05000F9B425 /* PostListViewController.graphql */,
 				843FDA79208DE7C600F9B425 /* PostTableViewCell.graphql */,
-				843FDA0E208C681A00F9B425 /* PostListViewController.swift */,
 				843FDA10208C681A00F9B425 /* Main.storyboard */,
 				843FDA13208C681A00F9B425 /* Assets.xcassets */,
 				843FDA15208C681A00F9B425 /* LaunchScreen.storyboard */,
 				843FDA18208C681A00F9B425 /* Info.plist */,
-				843FDA8420919EDE00F9B425 /* PostTableViewCell.swift */,
 				840DD45320C63AA800F84E38 /* StartViewController.swift */,
-				840DD45820C641B300F84E38 /* LoginViewController.swift */,
 				840DD45E20C7521400F84E38 /* NetworkRequest.swift */,
 			);
 			path = ApolloGraphQLSPA;
@@ -372,9 +402,11 @@
 				843FDA8220919A9F00F9B425 /* API.swift in Sources */,
 				843FDA0D208C681A00F9B425 /* AppDelegate.swift in Sources */,
 				840DD45420C63AA800F84E38 /* StartViewController.swift in Sources */,
+				840DD46520C8A57400F84E38 /* LoginComponent.swift in Sources */,
 				840DD45C20C74DC600F84E38 /* FetchAuthLocalStrategyModel.swift in Sources */,
 				843FDA8520919EDE00F9B425 /* PostTableViewCell.swift in Sources */,
 				840DD45F20C7521400F84E38 /* NetworkRequest.swift in Sources */,
+				840DD46120C81BA700F84E38 /* UserRespModel.swift in Sources */,
 				843FDA0F208C681A00F9B425 /* PostListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

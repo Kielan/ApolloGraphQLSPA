@@ -18,31 +18,19 @@ extension URLSession: URLSessionProtocol {}
 
 struct AuthService {
     private let session: URLSessionProtocol
-    private let authParametersGenerator: () -> String
     
-    init(session: URLSessionProtocol, authParametersGenerator: @escaping () -> String) {
+    init(session: URLSessionProtocol) {
         self.session = session
-        self.authParametersGenerator = authParametersGenerator
     }
     
     func login(requestModel: FetchAuthLocalStrategyModel, networkRequest: NetworkRequest) {
-        guard let url = makeURL(requestModel: requestModel) else {
-            return
-        }
+        guard let url = ProcessInfo.processInfo.environment["API_URL"] + "/auth"
         //is there a better way to do this? let me know.
         let dataTask = session.dataTask(with: url) { data, response, error in
-            print("error: \(String(describing: error))")
-            print("response: \(String(describing: response))")
-            let str = String(data: data ?? Data(), encoding: .utf8)
-            print("data: \(String(describing: str))")
+            let courses = try JSONDecoder().decode([UserRespModel].self, from: data)
+            networkRequest.start(dataTask)
+            
         }
-        networkRequest.start(dataTask)
-    }
-    private func makeURL(requestModel: FetchAuthLocalStrategyModel) -> URL? {
-        guard let namePrefix = requestModel.namePrefix
-            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-                return nil
-        }
-        return URL(string: ProcessInfo.processInfo.environment["API_URL"] + "/auth")
+        
     }
 }
